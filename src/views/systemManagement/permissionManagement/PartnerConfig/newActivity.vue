@@ -254,17 +254,17 @@ export default {
           enable: 0
         }
         const { latchall, latchrule } = checkmoney(data)
-        if (!latchall) {
-          this.$message.info(
-            '请检查（开通合伙人费用=平台手续费+激活奖励+订单返现+开通合伙人总金额）是否正确？',
-            5000
-          )
-          return
-        }
-        if (!latchrule) {
-          this.$message.info('请检查开通合伙人奖励总金额与开通合伙人奖励分配金额是否相等', 5000)
-          return
-        }
+        // if (!latchall) {
+        //   this.$message.info(
+        //     '请检查（开通合伙人费用=平台手续费+激活奖励+订单返现+开通合伙人总金额）是否正确？',
+        //     5000
+        //   )
+        //   return
+        // }
+        // if (!latchrule) {
+        //   this.$message.info('请检查开通合伙人奖励总金额与开通合伙人奖励分配金额是否相等', 5000)
+        //   return
+        // }
         this.isSend = true
         const res = await post({
           url: 'activity/add',
@@ -303,17 +303,17 @@ export default {
         activityId: this.addActivityData.activityId
       }
       const { latchall, latchrule } = checkmoney(data)
-      if (!latchall) {
-        this.$message.info(
-          '请检查（开通合伙人费用=平台手续费+激活奖励+订单返现+开通合伙人总金额）是否正确？',
-          5000
-        )
-        return
-      }
-      if (!latchrule) {
-        this.$message.info('请检查开通合伙人奖励总金额与开通合伙人奖励分配金额是否相等', 5000)
-        return
-      }
+      // if (!latchall) {
+      //   this.$message.info(
+      //     '请检查（开通合伙人费用=平台手续费+激活奖励+订单返现+开通合伙人总金额）是否正确？',
+      //     5000
+      //   )
+      //   return
+      // }
+      // if (!latchrule) {
+      //   this.$message.info('请检查开通合伙人奖励总金额与开通合伙人奖励分配金额是否相等', 5000)
+      //   return
+      // }
       this.isSend = true
       try {
         const res = await post({
