@@ -222,7 +222,7 @@ export default {
     },
      // 点击升级
     upgrade(row) {
-      this.$confirm('升级账号后可以正常登录APP,您确定升级该账号吗?', '账号升级', {
+      this.$confirm('该用户将升级为合伙人，您确定此操作吗？', '账号升级', {
         confirmButtonText: '确定',
         cancelButtonText: '取消'
       })
